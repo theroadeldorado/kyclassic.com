@@ -849,6 +849,14 @@ video {
   max-width: 80rem;
 }
 
+.max-w-\[500px\] {
+  max-width: 500px;
+}
+
+.max-w-\[580px\] {
+  max-width: 580px;
+}
+
 .-translate-y-4 {
   --tw-translate-y: -1rem;
   transform: var(--tw-transform);
