@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Kentucky Classic</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Content" media="all">
+</head>
+<body style="font-family: Content">
+
+<!-- Section 1 -->
+<section class="relative w-full bg-top bg-cover md:bg-center" x-data="{ showMenu: false }" style="background-image:url('./assets/bg.jpg')">
+  <div class="absolute inset-0 w-full h-full bg-gray-900 opacity-30"></div>
+  <div class="absolute inset-0 w-full h-64 opacity-40 bg-gradient-to-b from-black to-transparent"></div>
+  <div class="relative flex items-center justify-between w-full h-20">
+    <div class="container">
+      <a href="#_" class="relative flex items-center h-full pr-6 text-lg text-white">The Kentucky Classic<span class="text-green-400">.</span></a>
+      <nav class="flex-col items-center justify-center hidden h-full space-y-3 bg-white md:justify-end md:bg-transparent md:space-x-5 md:space-y-0 md:relative md:flex md:flex-row" :class="{'flex fixed top-0 left-0 w-full z-40': showMenu, 'hidden': !showMenu }">
+        <a href="#teams" class="relative text-lg font-medium tracking-wide text-green-400 transition duration-150 ease-out md:text-sm md:text-white" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+          <span class="block">The Teams</span>
+          <span class="absolute bottom-0 left-0 inline-block w-full h-1 -mb-1 overflow-hidden">
+            <span x-show="hover" class="absolute inset-0 inline-block w-full h-1 h-full transform border-t-2 border-green-400" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="scale-0" x-transition:enter-end="scale-100" x-transition:leave="transition ease-out duration-300" x-transition:leave-start="scale-100" x-transition:leave-end="scale-0" style="display: none;"></span>
+          </span>
+        </a>
+        <a href="#winners" class="relative text-lg font-medium tracking-wide text-green-400 transition duration-150 ease-out md:text-white md:text-sm" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+          <span class="block">Past Winners</span>
+          <span class="absolute bottom-0 left-0 inline-block w-full h-1 -mb-1 overflow-hidden">
+            <span x-show="hover" class="absolute inset-0 inline-block w-full h-1 h-full transform border-t-2 border-green-400" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="scale-0" x-transition:enter-end="scale-100" x-transition:leave="transition ease-out duration-300" x-transition:leave-start="scale-100" x-transition:leave-end="scale-0" style="display: none;"></span>
+          </span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Mobile Nav  -->
+    <nav class="fixed top-0 right-0 z-30 z-50 flex w-10 h-10 mt-4 mr-4 md:hidden">
+      <button @click="showMenu = !showMenu" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-white hover:bg-opacity-25 focus:outline-none">
+        <svg class="w-5 h-5 text-gray-200 fill-current" x-show="!showMenu" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
+        <svg class="w-5 h-5 text-gray-500" x-show="showMenu" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </nav>
+    <!-- End Mobile Nav -->
+  </div>
+
+  <div class="relative z-10 pt-28 pb-36 md:pt-40 md:pb-52">
+    <div class="container">
+      <div class="flex flex-col w-full h-full lg:w-2/3 items-start">
+        <p class="inline-block w-auto px-3 py-1 mb-5 text-xs font-bold tracking-wider text-white uppercase bg-green-600 rounded-full bg-gradient-to-br">The First Annual</p>
+        <h1 class="font-extrabold tracking-tight text-left mb-4 text-white text-7xl">Kentucky Classic</h1>
+        <p class="text-white text-xl pr-12">The Kentucky Classic is played every year in Kentucky between two 6-member teams from the Akron Ohio. It consists of four match-play sessions played over two days.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Section 2 -->
+<section class="relative py-20 overflow-hidden bg-green-800">
+  <div class="absolute w-1/2 right-0 top-0 bottom-0 bg-yellow-400"></div>
+  <div class="relative container">
+    <p class="inline-block w-auto px-3 py-1 mb-5 text-xs font-bold tracking-wider bg-green-600 uppercase text-white rounded-full bg-gradient-to-br">The Teams</p>
+    <h2 class="font-extrabold tracking-tight text-left mb-12 text-white text-7xl">Two Teams of <br class="hidden md:block">Okay Golfers.</h2>
+    <div class="grid w-full grid-cols-2 gap-4">
+      <div class="rounded-lg grid grid-cols-1 gap-8 md:grid-cols-2 pr-8">
+        <div class="col-span-2 mt-4">
+          <h3 class="text-[30px] leading-8 lg:text-[40px] font-bold text-center text-white">The Arcaro's</h3>
+        </div>
+        <div class="flex flex-col items-center justify-center col-span-2 md:col-span-1 p-2 lg:p-4 rounded-lg bg-white shadow-md">
+          <div class="relative overflow-hidden rounded-lg h-[120px] md:h-[180px] lg:h-[260px] w-full">
+            <img class="absolute z-20 w-full h-full inset-0 object-cover" src="./assets/nick.png">
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-2">Nick</span>Young</h3>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center col-span-2 md:col-span-1 p-2 lg:p-4 rounded-lg bg-white shadow-md">
+          <div class="relative overflow-hidden rounded-lg h-[120px] md:h-[180px] lg:h-[260px] w-full">
+            <img class="absolute z-20 w-full h-full inset-0 object-cover" src="./assets/joe.png">
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-2">Joe</span>Voros</h3>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center col-span-2 md:col-span-1 p-2 lg:p-4 rounded-lg bg-white shadow-md">
+          <div class="relative overflow-hidden rounded-lg h-[120px] md:h-[180px] lg:h-[260px] w-full">
+            <img class="absolute z-20 w-full h-full inset-0 object-cover" src="./assets/john.png">
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-2">John</span>Young</h3>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center col-span-2 md:col-span-1 p-2 lg:p-4 rounded-lg bg-white shadow-md">
+          <div class="relative overflow-hidden rounded-lg h-[120px] md:h-[180px] lg:h-[260px] w-full">
+            <img class="absolute z-20 w-full h-full inset-0 object-cover" src="./assets/jon.png">
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-2">Jon</span>Sias</h3>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center col-span-2 md:col-span-1 p-2 lg:p-4 rounded-lg bg-white shadow-md">
+          <div class="relative overflow-hidden rounded-lg h-[120px] md:h-[180px] lg:h-[260px] w-full">
+            <img class="absolute z-20 w-full h-full inset-0 object-cover" src="./assets/darin.png">
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-2">Darin</span>Jennings</h3>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center col-span-2 md:col-span-1 p-2 lg:p-4 rounded-lg bg-white shadow-md">
+          <div class="relative overflow-hidden rounded-lg h-[120px] md:h-[180px] lg:h-[260px] w-full">
+            <img class="absolute z-20 w-full h-full inset-0 object-cover" src="./assets/brian.png">
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-2">Brian</span>Gregory</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-lg grid grid-cols-1 gap-8 md:grid-cols-2 pl-8 ">
+        <div class="col-span-2 mt-4">
+          <h3 class="text-[30px] leading-8 lg:text-[40px] font-bold text-center text-gray-900">The Hartack's</h3>
+        </div>
+
+        <div class="flex flex-col items-center justify-center col-span-2 md:col-span-1 p-2 lg:p-4 rounded-lg bg-gray-900 shadow-md">
+          <div class="relative overflow-hidden rounded-lg h-[120px] md:h-[180px] lg:h-[260px] w-full">
+            <img class="absolute z-20 w-full h-full inset-0 object-cover" src="./assets/jeff.png">
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-2">Jeff</span>Hasen</h3>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center col-span-2 md:col-span-1 p-2 lg:p-4 rounded-lg bg-gray-900 shadow-md">
+          <div class="relative overflow-hidden rounded-lg h-[120px] md:h-[180px] lg:h-[260px] w-full">
+            <img class="absolute z-20 w-full h-full inset-0 object-cover" src="./assets/tim.png">
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-2">Tim</span>Bates</h3>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center col-span-2 md:col-span-1 p-2 lg:p-4 rounded-lg bg-gray-900 shadow-md">
+          <div class="relative overflow-hidden rounded-lg h-[120px] md:h-[180px] lg:h-[260px] w-full">
+            <img class="absolute z-20 w-full h-full inset-0 object-cover" src="./assets/matt.png">
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-2">Matt</span>Young</h3>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center col-span-2 md:col-span-1 p-2 lg:p-4 rounded-lg bg-gray-900 shadow-md">
+          <div class="relative overflow-hidden rounded-lg h-[120px] md:h-[180px] lg:h-[260px] w-full">
+            <img class="absolute z-20 w-full h-full inset-0 object-cover" src="./assets/nate.png">
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-2">Nate</span>Stair</h3>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center col-span-2 md:col-span-1 p-2 lg:p-4 rounded-lg bg-gray-900 shadow-md">
+          <div class="relative overflow-hidden rounded-lg h-[120px] md:h-[180px] lg:h-[260px] w-full">
+            <img class="absolute z-20 w-full h-full inset-0 object-cover" src="./assets/garret.jpg">
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-2">Garrett</span>Ormsb</h3>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center col-span-2 md:col-span-1 p-2 lg:p-4 rounded-lg bg-gray-900 shadow-md">
+          <div class="relative overflow-hidden rounded-lg h-[120px] md:h-[180px] lg:h-[260px] w-full">
+            <img class="absolute z-20 w-full h-full inset-0 object-cover" src="./assets/mark.png">
+          </div>
+          <div class="text-center mt-3">
+            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-2">Mark</span>Gauer</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Section 1 -->
+<section class="py-8 bg-gray-900 sm:py-10 md:py-12 lg:py-16 xl:py-20">
+    <div class="container">
+        <h2 class="mb-2 text-xl font-bold text-white md:text-3xl">The Rules</h2>
+
+        <div class="relative flex flex-col mt-2 mt-8 lg:flex-row">
+
+            <!-- Left side of FAQs -->
+            <div class="relative w-full lg:w-1/2 lg:pr-12">
+                <!-- Question 1 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>Where do I go to upgrade my account?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" x-cloak="">You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                </div>
+
+                <!-- Question 2 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>How do I use Tails in my project?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" x-cloak="">Implementation in your project is very simple. You can use the exported page as a starting point, or you can copy and paste the HTML into your own page.</p>
+                </div>
+
+                <!-- Question 3 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>How long will I have access to Tails?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" x-cloak="">You will have unlimited access to all your pre-built pages; however, if you want to be able to download and export your pages, you'll need a pro account. Paddle for processing payments.</p>
+                </div>
+
+
+                <!-- Question 4 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>What is the license on the pages?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" x-cloak="">You have unlimited use to the templates used in Tails; however, you cannot re-use the templates to sell for others to use.</p>
+                </div>
+            </div>
+
+
+            <!-- Right side of FAQs -->
+            <div class="relative w-full lg:w-1/2 lg:pl-12">
+                <!-- Question 1 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>How Many API Calls Do I Get?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" x-cloak="">The free plan will give you 2,000 free API calls. At anytime, if you wish to <a href="#_" class="font-medium text-blue-500 underline">upgrade to a paid plan</a>, you can eaisily increase that amount.</p>
+                </div>
+
+                <!-- Question 2 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>Where Can I Learn More?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" x-cloak="">You can learn more about using our API by visiting our <a href="#_" class="font-medium text-blue-500 underline">Academy page</a> which contains screencasts that will teach you the ins-and-outs of using the API. You may also visit the <a href="#_" class="font-medium text-blue-500 underline">developer docs</a> to learn more.</p>
+                </div>
+
+                <!-- Question 3 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>Do You Have Any SDK's?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" x-cloak="">Absolutely, we have an SDK for most of the popular languages and frameworks. Be sure to visit our <a href="#_" class="font-medium text-blue-500 underline">list of SDK's</a> to learn how you can build on top of our service.</p>
+                </div>
+
+
+                <!-- Question 4 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>Can I Become an Affiliate?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7" x-transition:enter="transition-all ease-out duration-300" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform -translate-y-0" x-transition:leave="transition-all ease-out hidden duration-200" x-transition:leave-start="opacity-100 transform -translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4" x-show="show" x-cloak="">Yes. We are utilizing <a href="https://paddle.com" class="font-medium text-blue-500 underline">paddle</a>, which has a fully functional affiliate program. <a href="#_" class="font-medium text-blue-500 underline">Click here</a> to signup as an affiliate.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Section 3 -->
+<section class="text-gray-700 bg-white body-font">
+  <div class="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
+    <a href="#" class="text-xl font-black leading-none text-gray-900 select-none logo">The Kentucky Classic<span class="text-indigo-600">.</span></a>
+    <p class="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">© 2021 The Kentucky Classic
+    </p>
+  </div>
+</section>
+
+<!-- AlpineJS Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
+
+</body>
+</html>
