@@ -15,7 +15,7 @@
   <div class="absolute inset-0 w-full h-64 opacity-40 bg-gradient-to-b from-black to-transparent"></div>
   <div class="relative flex items-center justify-between w-full h-20">
     <div class="container">
-      <a href="#_" class="relative flex items-center h-full pr-6 text-lg text-white">The Kentucky Classic<span class="text-green-400">.</span></a>
+      <!-- <a href="#_" class="relative flex items-center h-full pr-6 text-lg text-white">The Kentucky Classic<span class="text-green-400">.</span></a>
       <nav class="flex-col items-center justify-center hidden h-full space-y-3 bg-white md:justify-end md:bg-transparent md:space-x-5 md:space-y-0 md:relative md:flex md:flex-row" :class="{'flex fixed top-0 left-0 w-full z-40': showMenu, 'hidden': !showMenu }">
         <a href="#teams" class="relative text-lg font-medium tracking-wide text-green-400 transition duration-150 ease-out md:text-sm md:text-white" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
           <span class="block">The Teams</span>
@@ -28,17 +28,17 @@
           <span class="absolute bottom-0 left-0 inline-block w-full h-1 -mb-1 overflow-hidden">
             <span x-show="hover" class="absolute inset-0 inline-block w-full h-1 h-full transform border-t-2 border-green-400" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="scale-0" x-transition:enter-end="scale-100" x-transition:leave="transition ease-out duration-300" x-transition:leave-start="scale-100" x-transition:leave-end="scale-0" style="display: none;"></span>
           </span>
-        </a>
+        </a> -->
       </nav>
     </div>
 
     <!-- Mobile Nav  -->
-    <nav class="fixed top-0 right-0 z-30 z-50 flex w-10 h-10 mt-4 mr-4 md:hidden">
+    <!-- <nav class="fixed top-0 right-0 z-30 z-50 flex w-10 h-10 mt-4 mr-4 md:hidden">
       <button @click="showMenu = !showMenu" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-white hover:bg-opacity-25 focus:outline-none">
         <svg class="w-5 h-5 text-gray-200 fill-current" x-show="!showMenu" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
         <svg class="w-5 h-5 text-gray-500" x-show="showMenu" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
       </button>
-    </nav>
+    </nav> -->
     <!-- End Mobile Nav -->
   </div>
 
@@ -67,6 +67,9 @@
         </div>
         <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-white rounded-lg shadow-md md:col-span-1 lg:p-4">
           <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
+             <div class="absolute z-30 flex items-center justify-center w-8 h-8 p-1 text-yellow-400 bg-white rounded-full shadow-md right-2 bottom-2">
+              <svg aria-hidden="true" data-prefix="fas" data-icon="crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" ><path fill="currentColor" d="M528 448H112c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm64-320c-26.5 0-48 21.5-48 48 0 7.1 1.6 13.7 4.4 19.8L476 239.2c-15.4 9.2-35.3 4-44.2-11.6L350.3 85C361 76.2 368 63 368 48c0-26.5-21.5-48-48-48s-48 21.5-48 48c0 15 7 28.2 17.7 37l-81.5 142.6c-8.9 15.6-28.9 20.8-44.2 11.6l-72.3-43.4c2.7-6 4.4-12.7 4.4-19.8 0-26.5-21.5-48-48-48S0 149.5 0 176s21.5 48 48 48c2.6 0 5.2-.4 7.7-.8L128 416h384l72.3-192.8c2.5.4 5.1.8 7.7.8 26.5 0 48-21.5 48-48s-21.5-48-48-48z"/></svg>
+            </div>
             <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/nick.png">
           </div>
           <div class="mt-3 text-center">
@@ -91,7 +94,7 @@
         </div>
         <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-white rounded-lg shadow-md md:col-span-1 lg:p-4">
           <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/jon.png">
+            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/jon.jpg">
           </div>
           <div class="mt-3 text-center">
             <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Jon</span>Sias</h3>
@@ -107,10 +110,10 @@
         </div>
         <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-white rounded-lg shadow-md md:col-span-1 lg:p-4">
           <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/brian.png">
+            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/brian.jpg">
           </div>
           <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Brian</span>Gregory</h3>
+            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Bryan</span>Gregory</h3>
           </div>
         </div>
       </div>
@@ -122,15 +125,18 @@
 
         <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-gray-900 rounded-lg shadow-md md:col-span-1 lg:p-4">
           <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/jeff.png">
+            <div class="absolute z-30 flex items-center justify-center w-8 h-8 p-1 text-yellow-400 bg-white rounded-full shadow-md right-2 bottom-2">
+              <svg aria-hidden="true" data-prefix="fas" data-icon="crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" ><path fill="currentColor" d="M528 448H112c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm64-320c-26.5 0-48 21.5-48 48 0 7.1 1.6 13.7 4.4 19.8L476 239.2c-15.4 9.2-35.3 4-44.2-11.6L350.3 85C361 76.2 368 63 368 48c0-26.5-21.5-48-48-48s-48 21.5-48 48c0 15 7 28.2 17.7 37l-81.5 142.6c-8.9 15.6-28.9 20.8-44.2 11.6l-72.3-43.4c2.7-6 4.4-12.7 4.4-19.8 0-26.5-21.5-48-48-48S0 149.5 0 176s21.5 48 48 48c2.6 0 5.2-.4 7.7-.8L128 416h384l72.3-192.8c2.5.4 5.1.8 7.7.8 26.5 0 48-21.5 48-48s-21.5-48-48-48z"/></svg>
+            </div>
+            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/jeff.jpg">
           </div>
           <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Jeff</span>Hasen</h3>
+            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Jeff</span>Hansen</h3>
           </div>
         </div>
         <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-gray-900 rounded-lg shadow-md md:col-span-1 lg:p-4">
           <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/tim.png">
+            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/tim2.jpg">
           </div>
           <div class="mt-3 text-center">
             <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Tim</span>Bates</h3>
@@ -154,7 +160,7 @@
         </div>
         <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-gray-900 rounded-lg shadow-md md:col-span-1 lg:p-4">
           <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/garret.jpg">
+            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/garrett.jpg">
           </div>
           <div class="mt-3 text-center">
             <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Garrett</span>Ormsb</h3>
@@ -250,7 +256,9 @@
     <div class="container">
         <h2 class="mb-2 text-xl font-bold text-white md:text-3xl">The Rules</h2>
 
-        <div class="relative flex flex-col mt-2 mt-8 lg:flex-row">
+        <p class="text-white ">These are currently being developed and will be updated soon.</p>
+
+        <div class="relative flex-col hidden mt-2 mt-8 lg:flex-row">
 
             <!-- Left side of FAQs -->
             <div class="relative w-full lg:w-1/2 lg:pr-12">
