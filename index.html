@@ -53,21 +53,21 @@
     <!-- End Mobile Nav -->
   </div>
 
-  <div class="relative z-10 pt-28 pb-36 md:pt-40 md:pb-52">
+  <div class="relative z-10 pt-8 pb-12">
     <div class="container">
       <div class="flex flex-col w-full h-full max-w-[580px] items-start">
         <p class="inline-block w-auto px-3 pt-1 pb-[3px] mb-5 text-xs font-bold tracking-wider text-white uppercase bg-gray-900 rounded-full">The First Annual</p>
         <h1 class="mb-4 font-extrabold tracking-tight text-left text-white text-7xl">Kentucky Classic</h1>
         <p class="pr-12 text-xl text-white">The Kentucky Classic is played every year in Kentucky between two 6-member teams from Akron, The Soviets and The Americans. It consists of four match-play sessions played over two days.</p>
       </div>
+      <div class="flex items-center justify-center">
+        <div class="flex my-12 w-[500px] bottom-8 border-r-[6px] border-l-[6px] text-[60px] border-l-[#fef302] border-r-[#d40f25]">
+          <div class="px-12 md:px-24 py-2 bg-[#ed1b23] text-[#fef302]">☭ 0</div>
+          <div class="px-12 md:px-24 py-2 bg-[#071a58] text-white">0 <span class="relative top-1">🇺🇸</span></div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="absolute flex -translate-x-1/2 left-1/2 bottom-8 border-r-[6px] border-l-[6px] text-[60px] border-l-[#fef302] border-r-[#d40f25]">
-    <div class=" px-24 py-2 bg-[#ed1b23] text-[#fef302]">☭ 0</div>
-    <div class=" px-24 py-2 bg-[#071a58] text-white">0 <span class="relative top-1">🇺🇸</span></div>
-  </div>
-
 </section>
 
 <!-- Section 2 -->
@@ -81,7 +81,7 @@
         </div>
         <template x-for="(player, index) in soviets" :key="index">
           <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-[#ed1b23] rounded-lg shadow-md border-b-[8px] border-[#fef302] md:col-span-1 lg:p-4">
-            <div class="relative overflow-hidden ring-[4px] ring-gray-900 rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
+            <div class="relative overflow-hidden ring-[4px] ring-gray-900 rounded-md h-[160px] md:h-[180px] lg:h-[260px] w-full">
               <div x-show="player.captain"  class="absolute z-30 flex items-center justify-center w-8 h-8 p-1 bg-white text-[#fef302] rounded-full shadow-md right-2 bottom-2">
                 <svg aria-hidden="true" data-prefix="fas" data-icon="crown" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" viewBox="0 0 640 512" ><path fill="currentColor" d="M528 448H112c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm64-320c-26.5 0-48 21.5-48 48 0 7.1 1.6 13.7 4.4 19.8L476 239.2c-15.4 9.2-35.3 4-44.2-11.6L350.3 85C361 76.2 368 63 368 48c0-26.5-21.5-48-48-48s-48 21.5-48 48c0 15 7 28.2 17.7 37l-81.5 142.6c-8.9 15.6-28.9 20.8-44.2 11.6l-72.3-43.4c2.7-6 4.4-12.7 4.4-19.8 0-26.5-21.5-48-48-48S0 149.5 0 176s21.5 48 48 48c2.6 0 5.2-.4 7.7-.8L128 416h384l72.3-192.8c2.5.4 5.1.8 7.7.8 26.5 0 48-21.5 48-48s-21.5-48-48-48z"/></svg>
               </div>
@@ -91,8 +91,8 @@
                 <div class="w-14 h-14 text-[44px] text-[#ed1b23] leading-[50px] text-center border-gray-900 border-[4px] bg-gray-900 shadow-md rounded-full">☭</div>
               </div>
             <div class="mt-3 text-center">
-            <h3 class="flex items-center flex-col justify-center font-bold text-gray-900 text-28 lg:text-[32px] leading-8 uppercase">
-              <span class="italic block text-[18px] lg:text-[22px] font-normal mx-1 md:mx-2" x-text="player.firstName"></span>
+            <h3 class="flex items-center flex-col justify-center font-bold text-gray-900 text-[28px] lg:text-[32px] leading-8 uppercase">
+              <span class="italic block text-[20px] lg:text-[24px]font-normal mx-1 md:mx-2" x-text="player.firstName"></span>
               <span class="text-[#fef302]" x-text="player.lastName"></span>
             </h3>
             </div>
@@ -117,8 +117,8 @@
               <div class="w-14 h-14 text-[36px] text-gray-900 leading-[50px] text-center shadow-md border-white border-[4px] bg-white rounded-full">🦅</div>
               </div>
             <div class="mt-3 text-center">
-            <h3 class="flex items-center flex-col justify-center font-bold text-[#071a58] text-28 lg:text-[32px] leading-8">
-              <span class="italic block text-20 lg:text-[24px] font-normal mx-1 md:mx-2" x-text="player.firstName"></span>
+            <h3 class="flex items-center flex-col justify-center font-bold text-[#071a58] text-[28px] lg:text-[32px] leading-8">
+              <span class="italic block text-[20px] lg:text-[24px] font-normal mx-1 md:mx-2" x-text="player.firstName"></span>
               <span class="text-[#d40f25]" x-text="player.lastName"></span>
             </h3>
             </div>
