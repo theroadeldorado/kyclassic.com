@@ -15,7 +15,16 @@
   <link rel="manifest" href="/assets/site.webmanifest">
   <link rel="mask-icon" href="./assets/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#065F46">
+  <meta name="theme-color" content="#222222">
+
+  <meta property="og:title" content="The Kentucky Classic">
+  <meta property="og:description" content="The Soviets vs The Americans in Golf.">
+  <meta property="og:image" content="https://kyclassic.netlify.app/share.jpg">
+  <meta property="og:url" content="https://kyclassic.netlify.app">
+  <meta name="twitter:title" content="The Kentucky Classic">
+  <meta name="twitter:description" content="The Soviets vs The Americans in Golf.">
+  <meta name="twitter:image" content=" https://kyclassic.netlify.app/share.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body style="font-family: Merriweather">
 
@@ -61,9 +70,9 @@
         <p class="pr-12 text-xl text-white">The Kentucky Classic is played every year in Kentucky between two 6-member teams from Akron, The Soviets and The Americans. It consists of four match-play sessions played over two days.</p>
       </div>
       <div class="flex items-center justify-center">
-        <div class="flex my-12 w-[500px] bottom-8 border-r-[6px] border-l-[6px] text-[60px] border-l-[#fef302] border-r-[#d40f25]">
-          <div class="px-12 md:px-24 py-2 bg-[#ed1b23] text-[#fef302]">☭ 0</div>
-          <div class="px-12 md:px-24 py-2 bg-[#071a58] text-white">0 <span class="relative top-1">🇺🇸</span></div>
+        <div class="flex my-12 w-[500px] bottom-8 border-r-[6px] border-l-[6px] text-[40px] md:text-[60px] border-l-[#fef302] border-r-[#d40f25]">
+          <div class="w-1/2 text-center py-2 bg-[#ed1b23] text-[#fef302]">☭ 0</div>
+          <div class="w-1/2 text-center py-2 bg-[#071a58] text-white">0 <span class="relative top-1">🇺🇸</span></div>
         </div>
       </div>
     </div>
@@ -71,18 +80,18 @@
 </section>
 
 <!-- Section 2 -->
-<section x-data="teams()" class="relative py-20 overflow-hidden bg-gray-900">
+<section x-data="teams()" class="relative py-12 overflow-hidden bg-gray-900 md:py-20">
   <div class="absolute top-0 bottom-0 right-0 w-1/2 bg-[#071a58]"></div>
   <div class="container relative">
-    <div class="grid w-full grid-cols-2 gap-4">
-      <div  class="grid grid-cols-1 gap-8 pr-6 rounded-lg md:grid-cols-2 lg:pr-8" style="font-family: Russo One">
+    <div class="grid w-full grid-cols-2 gap-2 md:gap-4">
+      <div  class="grid grid-cols-1 gap-8 pr-4 rounded-lg md:grid-cols-2 lg:pr-8" style="font-family: Russo One">
         <div class="col-span-2 my-4">
-          <h3 class="text-[40px] leading-8 lg:text-[50px] uppercase font-bold text-center text-[#ed1b23]">The Soviets</h3>
+          <h3 class="text-[30px] leading-8 md:text-[50px] uppercase font-bold text-center text-[#ed1b23]">The <br class="lg:hidden">Soviets</h3>
         </div>
         <template x-for="(player, index) in soviets" :key="index">
           <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-[#ed1b23] rounded-lg shadow-md border-b-[8px] border-[#fef302] md:col-span-1 lg:p-4">
             <div class="relative overflow-hidden ring-[4px] ring-gray-900 rounded-md h-[160px] md:h-[180px] lg:h-[260px] w-full">
-              <div x-show="player.captain"  class="absolute z-30 flex items-center justify-center w-8 h-8 p-1 bg-white text-[#fef302] rounded-full shadow-md right-2 bottom-2">
+              <div x-show="player.captain"  class="absolute z-30 flex items-center justify-center w-6 h-6 md:w-8 md:h-8 p-1 bg-white text-[#ed1b23] rounded-full shadow-md right-2 bottom-2">
                 <svg aria-hidden="true" data-prefix="fas" data-icon="crown" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" viewBox="0 0 640 512" ><path fill="currentColor" d="M528 448H112c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm64-320c-26.5 0-48 21.5-48 48 0 7.1 1.6 13.7 4.4 19.8L476 239.2c-15.4 9.2-35.3 4-44.2-11.6L350.3 85C361 76.2 368 63 368 48c0-26.5-21.5-48-48-48s-48 21.5-48 48c0 15 7 28.2 17.7 37l-81.5 142.6c-8.9 15.6-28.9 20.8-44.2 11.6l-72.3-43.4c2.7-6 4.4-12.7 4.4-19.8 0-26.5-21.5-48-48-48S0 149.5 0 176s21.5 48 48 48c2.6 0 5.2-.4 7.7-.8L128 416h384l72.3-192.8c2.5.4 5.1.8 7.7.8 26.5 0 48-21.5 48-48s-21.5-48-48-48z"/></svg>
               </div>
               <img class="absolute inset-0 z-20 object-cover w-full h-full" :src="player.image">
@@ -91,7 +100,7 @@
                 <div class="w-14 h-14 text-[44px] text-[#ed1b23] leading-[50px] text-center border-gray-900 border-[4px] bg-gray-900 shadow-md rounded-full">☭</div>
               </div>
             <div class="mt-3 text-center">
-            <h3 class="flex items-center flex-col justify-center font-bold text-gray-900 text-[28px] lg:text-[32px] leading-8 uppercase">
+            <h3 class="flex items-center flex-col justify-center font-bold text-gray-900 text-[26px] lg:text-[32px] leading-8 uppercase">
               <span class="italic block text-[20px] lg:text-[24px]font-normal mx-1 md:mx-2" x-text="player.firstName"></span>
               <span class="text-[#fef302]" x-text="player.lastName"></span>
             </h3>
@@ -100,15 +109,15 @@
         </template>
       </div>
 
-      <div class="grid grid-cols-1 gap-8 pl-6 rounded-lg md:grid-cols-2 lg:pl-8">
+      <div class="grid grid-cols-1 gap-8 pl-4 rounded-lg md:grid-cols-2 lg:pl-8">
         <div class="col-span-2 my-4">
-          <h3 class="text-[40px] leading-8 lg:text-[50px] font-bold text-center text-white">The Americans</h3>
+          <h3 class="text-[30px] leading-8 md:text-[50px] font-bold text-center text-white">The <br class="lg:hidden">Americans</h3>
         </div>
 
         <template x-for="(player, index) in americans" :key="index">
           <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-white rounded-lg shadow-md border-b-[8px] border-[#d40f25] md:col-span-1 lg:p-4">
             <div class="relative overflow-hidden ring-[4px] ring-[#071a58] rounded-md h-[160px] md:h-[180px] lg:h-[260px] w-full">
-              <div x-show="player.captain"  class="absolute z-30 flex items-center justify-center w-8 h-8 p-1 bg-white text-[#fef302] rounded-full shadow-md right-2 bottom-2">
+              <div x-show="player.captain"  class="absolute z-30 flex items-center justify-center w-6 h-6 md:w-8 md:h-8 p-1 bg-white text-[#071a58] rounded-full shadow-md right-2 bottom-2">
                 <svg aria-hidden="true" data-prefix="fas" data-icon="crown" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" viewBox="0 0 640 512" ><path fill="currentColor" d="M528 448H112c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm64-320c-26.5 0-48 21.5-48 48 0 7.1 1.6 13.7 4.4 19.8L476 239.2c-15.4 9.2-35.3 4-44.2-11.6L350.3 85C361 76.2 368 63 368 48c0-26.5-21.5-48-48-48s-48 21.5-48 48c0 15 7 28.2 17.7 37l-81.5 142.6c-8.9 15.6-28.9 20.8-44.2 11.6l-72.3-43.4c2.7-6 4.4-12.7 4.4-19.8 0-26.5-21.5-48-48-48S0 149.5 0 176s21.5 48 48 48c2.6 0 5.2-.4 7.7-.8L128 416h384l72.3-192.8c2.5.4 5.1.8 7.7.8 26.5 0 48-21.5 48-48s-21.5-48-48-48z"/></svg>
               </div>
               <img class="absolute inset-0 z-20 object-cover w-full h-full" :src="player.image">
@@ -214,7 +223,7 @@
 
 
 <section x-data="theCourses()" class="w-full py-20 bg-gray-50">
-  <div class="px-10 mx-auto max-w-7xl">
+  <div class="container">
     <div class="px-10 mb-8 space-y-5 lg:px-0 lg:text-center lg:mb-16">
       <h2 class="text-4xl font-bold sm:text-5xl">Weekend Courses & Events</h2>
       <p class="text-lg text-gray-600 w-ful sm:text-xl">Find information on the courses that will be played this year. Also </p>
@@ -292,8 +301,8 @@
             length: '6469',
             rating: '70.5',
             slope: '129',
-            eventOne: 'Two Man Alternate Shot (1pt each matchup)',
-            eventTwo: 'Two Man Best Ball (1pt each matchup)',
+            eventOne: 'Two Man Alternate Shot - 1 point each',
+            eventTwo: 'Two Man Best Ball - 1 point each',
           },
           {
             name: 'Eagle Ridge',
@@ -305,8 +314,8 @@
             length: '6177',
             rating: '68.5',
             slope: '124',
-            eventOne: 'Two Man Scramble (1pt each matchup)',
-            eventTwo: 'Singles (1.5pt each matchup)',
+            eventOne: 'Two Man Scramble - 1 point each',
+            eventTwo: 'Singles - 1.5 points each',
           },
         ],
       }
