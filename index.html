@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Kentucky Classic</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Content" media="all">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Russo+One&display=swap" rel="stylesheet">
+
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
@@ -14,12 +17,13 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#065F46">
 </head>
-<body style="font-family: Content">
+<body style="font-family: Merriweather">
 
 <!-- Section 1 -->
 <section class="relative w-full bg-top bg-cover md:bg-center" x-data="{ showMenu: false }" style="background-image:url('./assets/bg.jpg')">
   <div class="absolute inset-0 w-full h-full bg-gray-900 opacity-30"></div>
   <div class="absolute inset-0 w-full h-64 opacity-40 bg-gradient-to-b from-black to-transparent"></div>
+  <div class="absolute inset-0 w-full h-full bg-gradient-to-br from-[#ed1b23] via-white to-[#071a58] mix-blend-multiply opacity-80"></div>
   <div class="relative flex items-center justify-between w-full h-20">
     <div class="container">
       <!-- <a href="#_" class="relative flex items-center h-full pr-6 text-lg text-white">The Kentucky Classic<span class="text-green-400">.</span></a>
@@ -52,207 +56,262 @@
   <div class="relative z-10 pt-28 pb-36 md:pt-40 md:pb-52">
     <div class="container">
       <div class="flex flex-col w-full h-full max-w-[580px] items-start">
-        <p class="inline-block w-auto px-3 py-1 mb-5 text-xs font-bold tracking-wider text-white uppercase bg-green-600 rounded-full bg-gradient-to-br">The First Annual</p>
+        <p class="inline-block w-auto px-3 pt-1 pb-[3px] mb-5 text-xs font-bold tracking-wider text-white uppercase bg-gray-900 rounded-full">The First Annual</p>
         <h1 class="mb-4 font-extrabold tracking-tight text-left text-white text-7xl">Kentucky Classic</h1>
-        <p class="pr-12 text-xl text-white">The Kentucky Classic is played every year in Kentucky between two 6-member teams from the Akron Ohio. It consists of four match-play sessions played over two days.</p>
+        <p class="pr-12 text-xl text-white">The Kentucky Classic is played every year in Kentucky between two 6-member teams from Akron, The Soviets and The Americans. It consists of four match-play sessions played over two days.</p>
       </div>
     </div>
+  </div>
+
+  <div class="absolute flex -translate-x-1/2 left-1/2 bottom-8 border-r-[6px] border-l-[6px] text-[60px] border-l-[#fef302] border-r-[#d40f25]">
+    <div class=" px-24 py-2 bg-[#ed1b23] text-[#fef302]">☭ 0</div>
+    <div class=" px-24 py-2 bg-[#071a58] text-white">0 <span class="relative top-1">🇺🇸</span></div>
   </div>
 
 </section>
 
 <!-- Section 2 -->
-<section class="relative py-20 overflow-hidden bg-green-800">
-  <div class="absolute top-0 bottom-0 right-0 w-1/2 bg-yellow-400"></div>
+<section x-data="teams()" class="relative py-20 overflow-hidden bg-gray-900">
+  <div class="absolute top-0 bottom-0 right-0 w-1/2 bg-[#071a58]"></div>
   <div class="container relative">
-    <p class="inline-block w-auto px-3 py-1 mb-5 text-xs font-bold tracking-wider text-white uppercase bg-green-600 rounded-full bg-gradient-to-br">The Teams</p>
-    <h2 class="mb-12 font-extrabold tracking-tight text-left text-white text-7xl">Two Teams of <br class="hidden md:block">Okay Golfers.</h2>
     <div class="grid w-full grid-cols-2 gap-4">
-      <div class="grid grid-cols-1 gap-8 pr-6 rounded-lg md:grid-cols-2 lg:pr-8">
-        <div class="col-span-2 mt-4">
-          <h3 class="text-[30px] leading-8 lg:text-[40px] font-bold text-center text-white">The Arcaro's</h3>
+      <div  class="grid grid-cols-1 gap-8 pr-6 rounded-lg md:grid-cols-2 lg:pr-8" style="font-family: Russo One">
+        <div class="col-span-2 my-4">
+          <h3 class="text-[40px] leading-8 lg:text-[50px] uppercase font-bold text-center text-[#ed1b23]">The Soviets</h3>
         </div>
-        <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-white rounded-lg shadow-md md:col-span-1 lg:p-4">
-          <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-             <div class="absolute z-30 flex items-center justify-center w-8 h-8 p-1 text-yellow-400 bg-white rounded-full shadow-md right-2 bottom-2">
-              <svg aria-hidden="true" data-prefix="fas" data-icon="crown" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" viewBox="0 0 640 512" ><path fill="currentColor" d="M528 448H112c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm64-320c-26.5 0-48 21.5-48 48 0 7.1 1.6 13.7 4.4 19.8L476 239.2c-15.4 9.2-35.3 4-44.2-11.6L350.3 85C361 76.2 368 63 368 48c0-26.5-21.5-48-48-48s-48 21.5-48 48c0 15 7 28.2 17.7 37l-81.5 142.6c-8.9 15.6-28.9 20.8-44.2 11.6l-72.3-43.4c2.7-6 4.4-12.7 4.4-19.8 0-26.5-21.5-48-48-48S0 149.5 0 176s21.5 48 48 48c2.6 0 5.2-.4 7.7-.8L128 416h384l72.3-192.8c2.5.4 5.1.8 7.7.8 26.5 0 48-21.5 48-48s-21.5-48-48-48z"/></svg>
+        <template x-for="(player, index) in soviets" :key="index">
+          <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-[#ed1b23] rounded-lg shadow-md border-b-[8px] border-[#fef302] md:col-span-1 lg:p-4">
+            <div class="relative overflow-hidden ring-[4px] ring-gray-900 rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
+              <div x-show="player.captain"  class="absolute z-30 flex items-center justify-center w-8 h-8 p-1 bg-white text-[#fef302] rounded-full shadow-md right-2 bottom-2">
+                <svg aria-hidden="true" data-prefix="fas" data-icon="crown" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" viewBox="0 0 640 512" ><path fill="currentColor" d="M528 448H112c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm64-320c-26.5 0-48 21.5-48 48 0 7.1 1.6 13.7 4.4 19.8L476 239.2c-15.4 9.2-35.3 4-44.2-11.6L350.3 85C361 76.2 368 63 368 48c0-26.5-21.5-48-48-48s-48 21.5-48 48c0 15 7 28.2 17.7 37l-81.5 142.6c-8.9 15.6-28.9 20.8-44.2 11.6l-72.3-43.4c2.7-6 4.4-12.7 4.4-19.8 0-26.5-21.5-48-48-48S0 149.5 0 176s21.5 48 48 48c2.6 0 5.2-.4 7.7-.8L128 416h384l72.3-192.8c2.5.4 5.1.8 7.7.8 26.5 0 48-21.5 48-48s-21.5-48-48-48z"/></svg>
+              </div>
+              <img class="absolute inset-0 z-20 object-cover w-full h-full" :src="player.image">
             </div>
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/nick.png">
+            <div class="relative z-30 flex items-center justify-center w-full -top-7 -mb-7">
+                <div class="w-14 h-14 text-[44px] text-[#ed1b23] leading-[50px] text-center border-gray-900 border-[4px] bg-gray-900 shadow-md rounded-full">☭</div>
+              </div>
+            <div class="mt-3 text-center">
+            <h3 class="flex items-center justify-center font-bold text-gray-900 text-28 lg:text-[32px] leading-8 uppercase">
+              <span class="italic block text-[18px] lg:text-[22px] font-normal mx-1 md:mx-2" x-text="player.firstName"></span>
+              <span class="text-[#fef302]" x-text="player.lastName"></span>
+            </h3>
+            </div>
           </div>
-          <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Nick</span>Young</h3>
-          </div>
-        </div>
-        <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-white rounded-lg shadow-md md:col-span-1 lg:p-4">
-          <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/joe.png">
-          </div>
-          <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Joe</span>Voros</h3>
-          </div>
-        </div>
-        <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-white rounded-lg shadow-md md:col-span-1 lg:p-4">
-          <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/john.png">
-          </div>
-          <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">John</span>Young</h3>
-          </div>
-        </div>
-        <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-white rounded-lg shadow-md md:col-span-1 lg:p-4">
-          <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/jon.jpg">
-          </div>
-          <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Jon</span>Sias</h3>
-          </div>
-        </div>
-        <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-white rounded-lg shadow-md md:col-span-1 lg:p-4">
-          <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/darin.png">
-          </div>
-          <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Darin</span>Jennings</h3>
-          </div>
-        </div>
-        <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-white rounded-lg shadow-md md:col-span-1 lg:p-4">
-          <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/bryan.jpg">
-          </div>
-          <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-gray-800 text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Bryan</span>Gregory</h3>
-          </div>
-        </div>
+        </template>
       </div>
 
       <div class="grid grid-cols-1 gap-8 pl-6 rounded-lg md:grid-cols-2 lg:pl-8">
-        <div class="col-span-2 mt-4">
-          <h3 class="text-[30px] leading-8 lg:text-[40px] font-bold text-center text-gray-900">The Hartack's</h3>
+        <div class="col-span-2 my-4">
+          <h3 class="text-[40px] leading-8 lg:text-[50px] font-bold text-center text-white">The Americans</h3>
         </div>
 
-        <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-gray-900 rounded-lg shadow-md md:col-span-1 lg:p-4">
-          <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <div class="absolute z-30 flex items-center justify-center w-8 h-8 p-1 text-yellow-400 bg-white rounded-full shadow-md right-2 bottom-2">
-              <svg aria-hidden="true" data-prefix="fas" data-icon="crown" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto"  viewBox="0 0 640 512" ><path fill="currentColor" d="M528 448H112c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm64-320c-26.5 0-48 21.5-48 48 0 7.1 1.6 13.7 4.4 19.8L476 239.2c-15.4 9.2-35.3 4-44.2-11.6L350.3 85C361 76.2 368 63 368 48c0-26.5-21.5-48-48-48s-48 21.5-48 48c0 15 7 28.2 17.7 37l-81.5 142.6c-8.9 15.6-28.9 20.8-44.2 11.6l-72.3-43.4c2.7-6 4.4-12.7 4.4-19.8 0-26.5-21.5-48-48-48S0 149.5 0 176s21.5 48 48 48c2.6 0 5.2-.4 7.7-.8L128 416h384l72.3-192.8c2.5.4 5.1.8 7.7.8 26.5 0 48-21.5 48-48s-21.5-48-48-48z"/></svg>
+        <template x-for="(player, index) in americans" :key="index">
+          <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-white rounded-lg shadow-md border-b-[8px] border-[#d40f25] md:col-span-1 lg:p-4">
+            <div class="relative overflow-hidden ring-[4px] ring-[#071a58] rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
+              <div x-show="player.captain"  class="absolute z-30 flex items-center justify-center w-8 h-8 p-1 bg-white text-[#fef302] rounded-full shadow-md right-2 bottom-2">
+                <svg aria-hidden="true" data-prefix="fas" data-icon="crown" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" viewBox="0 0 640 512" ><path fill="currentColor" d="M528 448H112c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm64-320c-26.5 0-48 21.5-48 48 0 7.1 1.6 13.7 4.4 19.8L476 239.2c-15.4 9.2-35.3 4-44.2-11.6L350.3 85C361 76.2 368 63 368 48c0-26.5-21.5-48-48-48s-48 21.5-48 48c0 15 7 28.2 17.7 37l-81.5 142.6c-8.9 15.6-28.9 20.8-44.2 11.6l-72.3-43.4c2.7-6 4.4-12.7 4.4-19.8 0-26.5-21.5-48-48-48S0 149.5 0 176s21.5 48 48 48c2.6 0 5.2-.4 7.7-.8L128 416h384l72.3-192.8c2.5.4 5.1.8 7.7.8 26.5 0 48-21.5 48-48s-21.5-48-48-48z"/></svg>
+              </div>
+              <img class="absolute inset-0 z-20 object-cover w-full h-full" :src="player.image">
             </div>
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/jeff.jpg">
+            <div class="relative z-30 flex items-center justify-center w-full -top-7 -mb-7">
+              <div class="w-14 h-14 text-[36px] text-gray-900 leading-[50px] text-center shadow-md border-white border-[4px] bg-white rounded-full">🦅</div>
+              </div>
+            <div class="mt-3 text-center">
+            <h3 class="flex items-center justify-center font-bold text-[#071a58] text-28 lg:text-[32px] leading-8">
+              <span class="italic block text-20 lg:text-[24px] font-normal mx-1 md:mx-2" x-text="player.firstName"></span>
+              <span class="text-[#d40f25]" x-text="player.lastName"></span>
+            </h3>
+            </div>
           </div>
-          <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Jeff</span>Hansen</h3>
-          </div>
-        </div>
-        <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-gray-900 rounded-lg shadow-md md:col-span-1 lg:p-4">
-          <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/tim2.jpg">
-          </div>
-          <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Tim</span>Bates</h3>
-          </div>
-        </div>
-        <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-gray-900 rounded-lg shadow-md md:col-span-1 lg:p-4">
-          <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/matt.png">
-          </div>
-          <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Matt</span>Young</h3>
-          </div>
-        </div>
-        <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-gray-900 rounded-lg shadow-md md:col-span-1 lg:p-4">
-          <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/nate.png">
-          </div>
-          <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Nate</span>Stair</h3>
-          </div>
-        </div>
-        <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-gray-900 rounded-lg shadow-md md:col-span-1 lg:p-4">
-          <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/garrett.jpg">
-          </div>
-          <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Garrett</span>Ormsb</h3>
-          </div>
-        </div>
-        <div class="flex flex-col items-center justify-center col-span-2 p-2 bg-gray-900 rounded-lg shadow-md md:col-span-1 lg:p-4">
-          <div class="relative overflow-hidden rounded-md h-[120px] md:h-[180px] lg:h-[260px] w-full">
-            <img class="absolute inset-0 z-20 object-cover w-full h-full" src="./assets/mark.png">
-          </div>
-          <div class="mt-3 text-center">
-            <h3 class="flex items-center justify-center font-bold text-white text-28 lg:text-[32px] leading-8"><span class="italic block text-20 lg:text-[24px] font-normal mr-1 md:mr-2">Mark</span>Gauer</h3>
-          </div>
-        </div>
+        </template>
       </div>
     </div>
   </div>
+
+  <script>
+    function teams() {
+      return {
+        soviets:[
+          {
+            firstName: 'Nick',
+            lastName: 'Young',
+            captain: true,
+            image: './assets/nick.png',
+          },
+          {
+            firstName: 'Bryan',
+            lastName: 'Gregory',
+            captain: false,
+            image: './assets/bryan.jpg',
+          },
+          {
+            firstName: 'Darin',
+            lastName: 'Jennings',
+            captain: false,
+            image: './assets/darin.png',
+          },
+          {
+            firstName: 'Jon',
+            lastName: 'Sias',
+            captain: false,
+            image: './assets/jon.png',
+          },
+          {
+            firstName: 'Joe',
+            lastName: 'Voros',
+            captain: false,
+            image: './assets/joe.png',
+          },
+          {
+            firstName: 'John',
+            lastName: 'Young',
+            captain: false,
+            image: './assets/john.png',
+          },
+        ],
+        americans:[
+          {
+            firstName: 'Jeff',
+            lastName: 'Hansen',
+            captain: true,
+            image: './assets/jeff.jpg',
+          },
+          {
+            firstName: 'Mark',
+            lastName: 'Gauer',
+            captain: false,
+            image: './assets/mark.png',
+          },
+          {
+            firstName: 'Darin',
+            lastName: 'Jennings',
+            captain: false,
+            image: './assets/darin.png',
+          },
+          {
+            firstName: 'Garrett',
+            lastName: 'Ormsb',
+            captain: false,
+            image: './assets/garrett.jpg',
+          },
+          {
+            firstName: 'Nate',
+            lastName: 'Stair',
+            captain: false,
+            image: './assets/nate.png',
+          },
+          {
+            firstName: 'Matt',
+            lastName: 'Young',
+            captain: false,
+            image: './assets/matt.png',
+          },
+        ]
+      }
+    }
+  </script>
 </section>
 
 
-
-<!-- Section 1 -->
-<section class="w-full py-20 bg-gray-50">
+<section x-data="theCourses()" class="w-full py-20 bg-gray-50">
   <div class="px-10 mx-auto max-w-7xl">
     <div class="px-10 mb-8 space-y-5 lg:px-0 lg:text-center lg:mb-16">
       <h2 class="text-4xl font-bold sm:text-5xl">Weekend Courses & Events</h2>
       <p class="text-lg text-gray-600 w-ful sm:text-xl">Find information on the courses that will be played this year. Also </p>
     </div>
     <div class="grid overflow-hidden lg:rounded-xl">
-      <div class="grid items-center lg:grid-cols-2">
-        <div class="flex flex-col items-start justify-center h-full py-12 pl-8 pr-8 space-y-4 bg-white lg:pr-20 lg:py-12">
-          <h3 class="text-2xl font-semibold sm:text-4xl">Stonecrest</h3>
-          <p class="mb-3 text-lg text-gray-600">
-            StoneCrest Golf Course is a unique facility owned and operated by the City of Prestonsburg, located in Southeastern Kentucky. The course sits on 700 acres of mountain top land and offers amenities such as a pro shop, club repairs, practice green, driving range, clubhouse and lounge.
-          </p>
-          <div>
-            <p class="mb-1 text-xl font-semibold">Course Information</p>
-            <div class="flex items-center justify-start text-[14px] space-x-4">
-              <div><span class="font-bold text-green-700">PAR:</span> 72</div>
-              <div><span class="font-bold text-green-700">YARDS:</span> 6475</div>
-              <div><span class="font-bold text-green-700">RATING:</span> 70.8</div>
-              <div><span class="font-bold text-green-700">SLOPE:</span> 124</div>
-            </div>
+      <template x-for="(course, index) in courses" :key="index">
+        <div class="grid lg:grid-cols-2">
+          <div class="relative order-last" :class="{'lg:order-first': course.imageLeft}">
+            <img :src="course.image" class="object-cover w-full h-full" :alt="course.name">
           </div>
-          <div>
-            <p class="mb-1 text-xl font-semibold">Saturday Events</p>
-            <div class="flex items-center justify-start space-x-4">
-              <div><span class="font-bold text-green-700">Morning:</span> Alternate Shot</div>
-              <div><span class="font-bold text-green-700">Afternoon:</span> Two Man Best Ball</div>
+          <div class="flex flex-col items-start justify-center h-full py-12 pl-8 pr-8 space-y-4 bg-white lg:pl-20 lg:py-12">
+            <p class="inline-block w-auto px-3 pt-1 pb-[3px] mb-2 text-xs font-bold tracking-wider text-white uppercase bg-gray-900 rounded-full" x-text="course.pill"></p>
+            <h3 class="text-2xl font-semibold sm:text-4xl" x-text="course.name"></h3>
+            <p class="text-lg text-left text-gray-900" x-html="course.teeTime"></p>
+            <div>
+              <p class="mb-1 text-xl font-semibold">Course Information</p>
+              <div class="flex items-center justify-start text-[14px] mb-2 space-x-4">
+                <div><span class="font-bold text-green-700">PAR:</span> <span x-text="course.par"></span></div>
+                <div><span class="font-bold text-green-700">YARDS:</span> <span x-text="course.length"></span></div>
+              </div>
+              <div class="flex items-center justify-start text-[14px] mb-2 space-x-4">
+                <div><span class="font-bold text-green-700">RATING:</span> <span x-text="course.rating"></span></div>
+                <div><span class="font-bold text-green-700">SLOPE:</span> <span x-text="course.slope"></span></div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="relative overflow-hidden">
-          <img src="./assets/stonecrest.jpg" class="object-cover w-full h-full" alt="">
-        </div>
-      </div>
-
-      <div class="grid lg:grid-cols-2">
-        <div class="relative order-last lg:order-first">
-          <img src="./assets/yatesville.jpg" class="object-cover w-full h-full" alt="">
-        </div>
-        <div class="flex flex-col items-start justify-center h-full py-12 pl-8 pr-8 space-y-4 bg-white lg:pl-20 lg:py-12">
-          <h3 class="text-2xl font-semibold sm:text-4xl">Eagle Ridge</h3>
-          <p class="text-lg text-left text-gray-600">
-            Eagle Ridge Golf Course Golf Course, part of Yatesville Lake State Park, is located in the scenic eastern Kentucky foothills near Louisa, Kentucky. Architects Arthur Hills/Steve Forrest design highlights the rugged beauty of the region in creating a golfing masterpiece, with manicured fairways and immaculate greens.  You will not only be treated to a wonderful, challenging test of golf but you will be able to enjoy an abundant array of wildlife, dramatic tee to green elevation changes and scenic views which will leave you awestruck.
-          </p>
-          <div>
-            <p class="mb-1 text-xl font-semibold">Course Information</p>
-            <div class="flex items-center justify-start text-[14px] space-x-4">
-              <div><span class="font-bold text-green-700">PAR:</span> 71</div>
-              <div><span class="font-bold text-green-700">YARDS:</span> 6177</div>
-              <div><span class="font-bold text-green-700">RATING:</span> 68.50</div>
-              <div><span class="font-bold text-green-700">SLOPE:</span> 124</div>
-            </div>
-          </div>
-          <div>
-            <p class="mb-1 text-xl font-semibold">Sunday Events</p>
-            <div class="flex items-center justify-start space-x-4">
-              <div><span class="font-bold text-green-700">Morning:</span> Two Man Scramble</div>
-              <div><span class="font-bold text-green-700">Afternoon:</span> Singles</div>
+            <div>
+              <p x-show="course.eventOne && course.eventTwo" class="mb-1 text-xl font-semibold">Events</p>
+                <div class="mb-2" x-text="course.eventOne"></div>
+                <div class="mb-2" x-text="course.eventTwo"></div>
             </div>
           </div>
         </div>
-      </div>
+      </template>
     </div>
   </div>
+
+
+   <script>
+    function theCourses() {
+      return {
+        courses:[
+          {
+            name: 'Oak Shadows',
+            pill: 'Thursday Practice',
+            teeTime: '<strong>Tee Times:</strong> 1:00, 1:08 and 1:16',
+            imageLeft: false,
+            image: './assets/oak-shadows.jpg',
+            par: '72',
+            length: '6384',
+            rating: '70.2',
+            slope: '125',
+            eventOne: '',
+            eventTwo: '',
+          },
+          {
+            name: 'Stonecrest',
+            pill: 'Friday Practice',
+            teeTime: '<strong>Tee Times:</strong> 12:00pm, 12:10pm and 12:20pm',
+            imageLeft: true,
+            image: './assets/stonecrest.jpg',
+            par: '72',
+            length: '6469',
+            rating: '70.5',
+            slope: '129',
+            eventOne: '',
+            eventTwo: '',
+          },
+          {
+            name: 'Hidden Cove',
+            pill: 'Day One',
+            teeTime: '<strong>Tee Times:</strong> 9:00am and 1:30pm',
+            imageLeft: false,
+            image: './assets/hidden-cove.jpg',
+            par: '72',
+            length: '6469',
+            rating: '70.5',
+            slope: '129',
+            eventOne: 'Two Man Alternate Shot (1pt each matchup)',
+            eventTwo: 'Two Man Best Ball (1pt each matchup)',
+          },
+          {
+            name: 'Eagle Ridge',
+            pill: 'Final Day',
+            teeTime: '<strong>Tee Times:</strong> 8:30am and 1:15pm',
+            imageLeft: true,
+            image: './assets/yatesville.jpg',
+            par: '71',
+            length: '6177',
+            rating: '68.5',
+            slope: '124',
+            eventOne: 'Two Man Scramble (1pt each matchup)',
+            eventTwo: 'Singles (1.5pt each matchup)',
+          },
+        ],
+      }
+    }
+  </script>
 </section>
 
 
@@ -263,9 +322,11 @@
     <div class="container">
         <h2 class="mb-2 text-xl font-bold text-white md:text-3xl">The Rules</h2>
 
-        <p class="text-white ">These are currently being developed and will be updated soon.</p>
+        <h4 class="mb-2 text-xl font-bold text-white md:text-2xl">First team to 9.5 Points wins.</h4>
 
-        <div class="relative flex-col hidden mt-2 mt-8 lg:flex-row">
+        <p class="text-white">The rules are simple. You can fluff but can't improve shot. If u hit it in the high weeds, you can fluff it but gotta play it where it is.</p>
+
+        <div class="relative flex-col hidden mt-8 lg:flex-row">
 
             <!-- Left side of FAQs -->
             <div class="relative w-full lg:w-1/2 lg:pr-12">
