@@ -1,23 +1,23 @@
 import Link from 'next/link';
 import FireLogo from '../public/logo.svg';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 
 const NavBar = () => {
-  const router = useRouter();
-  const navLinks = [
-    {
-      href: '/',
-      text: 'Home',
-    },
-    {
-      href: '/about',
-      text: 'About',
-    },
-    {
-      href: '/test',
-      text: 'Test',
-    },
-  ];
+  // const router = useRouter();
+  // const navLinks = [
+  //   {
+  //     href: '/',
+  //     text: 'Home',
+  //   },
+  //   {
+  //     href: '/about',
+  //     text: 'About',
+  //   },
+  //   {
+  //     href: '/test',
+  //     text: 'Test',
+  //   },
+  // ];
   return (
     <div>
       <nav className="bg-white shadow">

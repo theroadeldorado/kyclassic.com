@@ -6,9 +6,9 @@ const TheRules = () => {
 
         <h4 className="mb-4 text-xl font-bold text-white md:text-2xl">First team to 9.5 Points wins.</h4>
 
-        <p className="mb-3 text-white">The rules are simple. You can fluff but can't improve shot. If u hit it in the high weeds, you can fluff it but gotta play it where it is.</p>
+        <p className="mb-3 text-white">{`The rules are simple. You can fluff but can't improve shot. If u hit it in the high weeds, you can fluff it but gotta play it where it is.`}</p>
 
-        <p className="text-white">And always remember "Ball Don't Lie"</p>
+        <p className="text-white">{`And always remember "Ball Don't Lie"`}</p>
       </div>
     </div>
   );

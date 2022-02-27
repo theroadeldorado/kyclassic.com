@@ -5,10 +5,10 @@ import TheRules from '../components/TheRules';
 import TheSchedule from '../components/TheSchedule';
 
 export const getStaticProps = async () => {
-  const resTeams = await fetch('http://localhost:3000/api/teams');
+  const resTeams = await fetch(`${process.env.SOURCE}/api/teams`);
   const dataTeams = await resTeams.json();
 
-  const resCourses = await fetch('http://localhost:3000/api/courses');
+  const resCourses = await fetch(`${process.env.SOURCE}/api/courses`);
   const dataCourses = await resCourses.json();
 
   return {
@@ -16,7 +16,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const Home = ({ teams, courses }) => {
+const Home = ({ teams = null, courses = null }) => {
   return (
     <div>
       <Head>
