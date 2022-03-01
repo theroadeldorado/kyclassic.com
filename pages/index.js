@@ -4,7 +4,7 @@ import PersonCard from '../components/PersonCard';
 import TheRules from '../components/TheRules';
 import TheSchedule from '../components/TheSchedule';
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const resTeams = await fetch(`${process.env.SOURCE}/api/teams`);
   const dataTeams = await resTeams.json();
 
