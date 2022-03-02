@@ -19,7 +19,7 @@ export const getServerSideProps = async () => {
   };
 };
 
-const Home = ({ teams = null, courses = null }) => {
+const Home = ({ teams, courses }) => {
   return (
     <div>
       <Head>
