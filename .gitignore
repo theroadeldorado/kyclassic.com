@@ -35,3 +35,7 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+/pages/index.js
+/pages/404.js
+/pages/_app.js
