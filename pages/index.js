@@ -3,16 +3,19 @@ import Image from 'next/image';
 import PersonCard from '../components/PersonCard';
 import TheRules from '../components/TheRules';
 import TheSchedule from '../components/TheSchedule';
+import axios from 'axios';
 
 export const getServerSideProps = async () => {
-  const resTeams = await fetch(`${process.env.SOURCE}/api/teams`);
-  const dataTeams = await resTeams.json();
+  const dataTeams = await axios.get(`${process.env.SOURCE}/api/teams`).then((resTeams) => {
+    return resTeams.data;
+  });
 
-  const resCourses = await fetch(`${process.env.SOURCE}/api/courses`);
-  const dataCourses = await resCourses.json();
+  const dataCourse = await axios.get(`${process.env.SOURCE}/api/courses`).then((resCourses) => {
+    return resCourses.data;
+  });
 
   return {
-    props: { teams: dataTeams.teams, courses: dataCourses.courses },
+    props: { teams: dataTeams.teams, courses: dataCourse.courses },
   };
 };
 
