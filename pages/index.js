@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import PersonCard from '../components/PersonCard';
+// import PersonCard from '../components/PersonCard';
 import TheRules from '../components/TheRules';
-import TheSchedule from '../components/TheSchedule';
+// import TheSchedule from '../components/TheSchedule';
 
 // export const getServerSideProps = async () => {
 //   const resTeams = await fetch(`${process.env.SOURCE}/api/teams`);
@@ -38,10 +38,10 @@ const Home = () => {
               <div className="flex flex-col w-full h-full max-w-[580px] items-start">
                 <p className="inline-block w-auto px-3 pt-1 pb-[3px] mb-8 text-xs font-bold tracking-wider text-white uppercase bg-gray-900 rounded-full">The First Annual</p>
                 <h1 className="mb-8 font-thin tracking-tight text-left text-white text-7xl">Kentucky Classic</h1>
-                <p className="pr-12 text-xl leading-8 text-white">
+                {/* <p className="pr-12 text-xl leading-8 text-white">
                   The Kentucky Classic is played every year in Kentucky between two 6-member teams from Akron, {teams[0].name} and {teams[1].name}. It consists of four match-play sessions played over
                   two days.
-                </p>
+                </p> */}
               </div>
               <div className="flex items-center justify-center">
                 <div className="flex my-12 w-[500px] bottom-8 border-r-[6px] border-l-[6px] text-[30px] md:text-[60px] border-l-eutpc border-r-ustpc">
