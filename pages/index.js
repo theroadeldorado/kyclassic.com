@@ -3,23 +3,177 @@ import Image from 'next/image';
 import PersonCard from '../components/PersonCard';
 import TheRules from '../components/TheRules';
 import TheSchedule from '../components/TheSchedule';
-import axios from 'axios';
+import { useState } from 'react';
 
-export const getServerSideProps = async () => {
-  const dataTeams = await axios.get(`${process.env.SOURCE}/api/teams`).then((resTeams) => {
-    return resTeams.data;
-  });
+const dataTeams = [
+  {
+    name: 'The Europeans',
+    primaryColor: 'eutpc',
+    secondaryColor: 'eutsc',
+    tertiaryColor: 'euttc',
+    logo: '🇪🇺',
+    wins: 0,
+    members: [
+      {
+        firstName: 'Nick',
+        lastName: 'Young',
+        captain: true,
+        image: 'nick.jpg',
+        status: 'active',
+        participation: ['2021'],
+      },
+      {
+        firstName: 'Bryan',
+        lastName: 'Gregory',
+        captain: false,
+        image: 'bryan.jpg',
+        status: 'active',
+        participation: ['2021'],
+      },
+      {
+        firstName: 'Darin',
+        lastName: 'Jennings',
+        captain: false,
+        image: 'darin.jpg',
+        status: 'active',
+        participation: ['2021'],
+      },
+      {
+        firstName: 'Jon',
+        lastName: 'Sias',
+        captain: false,
+        image: 'jon.jpg',
+        status: 'active',
+        participation: ['2021'],
+      },
+      {
+        firstName: 'Joe',
+        lastName: 'Voros',
+        captain: false,
+        image: 'joe.jpg',
+        status: 'active',
+        participation: ['2021'],
+      },
+      {
+        firstName: 'John',
+        lastName: 'Young',
+        captain: false,
+        image: 'john.jpg',
+        status: 'active',
+        participation: ['2021'],
+      },
+    ],
+  },
+  {
+    name: 'The Americans',
+    primaryColor: 'ustpc',
+    secondaryColor: 'ustsc',
+    tertiaryColor: 'usttc',
+    logo: '🇺🇸',
+    wins: 1,
+    members: [
+      {
+        firstName: 'Jeff',
+        lastName: 'Hansen',
+        captain: true,
+        image: 'jeff.jpg',
+        status: 'active',
+        participation: ['2021'],
+      },
+      {
+        firstName: 'Tim',
+        lastName: 'Bates',
+        captain: false,
+        image: 'tim.jpg',
+        status: 'active',
+        participation: ['2021'],
+      },
+      {
+        firstName: 'Mark',
+        lastName: 'Gauer',
+        captain: false,
+        image: 'mark.jpg',
+        status: 'active',
+        participation: ['2021'],
+      },
+      {
+        firstName: 'Garrett',
+        lastName: 'Ormsb',
+        captain: false,
+        image: 'garrett.jpg',
+        status: 'active',
+        participation: ['2021'],
+      },
+      {
+        firstName: 'Nate',
+        lastName: 'Stair',
+        captain: false,
+        image: 'nate.jpg',
+        status: 'active',
+        participation: ['2021'],
+      },
+      {
+        firstName: 'Matt',
+        lastName: 'Young',
+        captain: false,
+        image: 'matt.jpg',
+        status: 'active',
+        participation: ['2021'],
+      },
+    ],
+  },
+];
 
-  const dataCourse = await axios.get(`${process.env.SOURCE}/api/courses`).then((resCourses) => {
-    return resCourses.data;
-  });
+const dataCourses = [
+  {
+    name: 'Oak Shadows',
+    day: 'Thursday Practice',
+    teeTime: '<strong>Tee Times:</strong> 1:00, 1:08 and 1:16',
+    image: 'oak-shadows.jpg',
+    par: '72',
+    length: '6384',
+    rating: '70.2',
+    slope: '125',
+  },
+  {
+    name: 'Stonecrest',
+    day: 'Friday Practice',
+    teeTime: '<strong>Tee Times:</strong> 12:00pm, 12:10pm and 12:20pm',
+    image: 'stonecrest.jpg',
+    par: '72',
+    length: '6469',
+    rating: '70.5',
+    slope: '129',
+  },
+  {
+    name: 'Hidden Cove Golf Course',
+    day: 'Day One',
+    teeTime: '<strong>Tee Times:</strong> 9:00am and 1:30pm',
+    image: 'yatesville.jpg',
+    par: '72',
+    length: '6469',
+    rating: '70.5',
+    slope: '129',
+    eventOne: 'Two Man Alternate Shot - 1 point each',
+    eventTwo: 'Two Man Best Ball - 1 point each',
+  },
+  {
+    name: 'Eagle Ridge',
+    day: 'Final Day',
+    teeTime: '<strong>Tee Times:</strong> 8:30am and 1:15pm',
+    image: 'eagles-ridge.jpg',
+    par: '71',
+    length: '6177',
+    rating: '68.5',
+    slope: '124',
+    eventOne: 'Two Man Scramble - 1 point each',
+    eventTwo: 'Singles - 1.5 points each',
+  },
+];
 
-  return {
-    props: { teams: dataTeams.teams, courses: dataCourse.courses },
-  };
-};
-
-const Home = ({ teams, courses }) => {
+const Home = () => {
+  const [teams] = useState(dataTeams);
+  const [courses] = useState(dataCourses);
   return (
     <div>
       <Head>
