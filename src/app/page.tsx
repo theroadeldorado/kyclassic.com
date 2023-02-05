@@ -53,7 +53,7 @@ const internationals = [
 const americans = [
   {
     name: 'Matt Young',
-    points: 9,
+    points: 7,
     captain: true,
     image: '/people/matt.jpg',
     memberSince: 2021,
