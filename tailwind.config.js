@@ -1,32 +1,36 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+
+    // Or if using `src` directory:
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
   safelist: [
-    {
-      pattern: /(text|bg|border|ring)-(eutpc|eutsc|euttc|ustpc|ustsc|usttc)/,
-    },
+    'bg-int-primary',
+    'bg-int-secondary',
+    'bg-int-tertiary',
+    'bg-usa-primary',
+    'bg-usa-secondary',
+    'bg-usa-tertiary',
+    'text-int-primary',
+    'text-int-secondary',
+    'text-int-tertiary',
+    'text-usa-primary',
+    'text-usa-secondary',
+    'text-usa-tertiary',
   ],
   theme: {
-    fontFamily: {
-      body: ['Roboto', 'Arial', 'sans-serif'],
-    },
-    container: {
-      center: true,
-      padding: '2rem',
-    },
     extend: {
       colors: {
-        eutpc: '#013399',
-        eutsc: '#ffcc01',
-        euttc: '#ffffff',
-        ustpc: '#ed1e15',
-        ustsc: '#002868',
-        usttc: '#ffffff',
-      },
-      screens: {
-        sm: '575px',
-        md: '768px',
-        lg: '992px',
-        xl: '1200px',
+        'int-primary': '#ffcb03',
+        'int-secondary': '#000',
+        'int-tertiary': '#18181b',
+        'usa-primary': '#B31942',
+        'usa-secondary': '#0A3161',
+        'usa-tertiary': '#fff',
       },
     },
   },
