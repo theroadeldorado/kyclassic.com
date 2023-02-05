@@ -3,6 +3,7 @@ import Team from '../components/Team';
 import Course from '../components/Course';
 import Logo from '../components/Logo';
 import Rules from '../components/Rules';
+import Image from 'next/image';
 
 const internationals = [
   {
@@ -14,7 +15,7 @@ const internationals = [
   },
   {
     name: 'Nick Young',
-    points: 3,
+    points: 3.75,
     captain: false,
     image: '/people/nick.jpg',
     memberSince: 2021,
@@ -52,35 +53,35 @@ const internationals = [
 const americans = [
   {
     name: 'Matt Young',
-    points: 1,
+    points: 9,
     captain: true,
     image: '/people/matt.jpg',
     memberSince: 2021,
   },
   {
     name: 'Jeff Hansen',
-    points: 4.5,
+    points: 6.75,
     captain: false,
     image: '/people/jeff.jpg',
     memberSince: 2021,
   },
   {
     name: 'Tim Bates',
-    points: 1,
+    points: 2.5,
     captain: false,
     image: '/people/tim.jpg',
     memberSince: 2021,
   },
   {
     name: 'Garrett Ormsb',
-    points: 1,
+    points: 4.5,
     captain: false,
     image: '/people/garrett.jpg',
     memberSince: 2021,
   },
   {
     name: 'Nate Stair',
-    points: 3.5,
+    points: 6,
     captain: false,
     image: '/people/nate.jpg',
     memberSince: 2021,
@@ -139,7 +140,7 @@ export default function Home() {
 
         <div className="bg-black py-12">
           <div className="w-36 h-auto mx-auto">
-            <Logo />
+            <Image src="/gold.png" alt="" width={200} height={200} className="w-[150px] h-auto" />
             <p className="text-white text-center text-sm mt-2"> 2021 - {new Date().getFullYear()}</p>
           </div>
         </div>
