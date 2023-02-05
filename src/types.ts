@@ -1,6 +1,7 @@
-export type AmericanT = {
+export type PeopleT = {
   name: string;
-  wins: number;
-  caption: boolean;
+  points: number;
+  captain: boolean;
   image: string;
+  memberSince: number;
 };

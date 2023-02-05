@@ -98,6 +98,22 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-8 shadow-lg w-full" aria-hidden="true">
+        <div className="flex justify-center gap-4">
+          <div className="bg-usa-primary text-white flex items-center">
+            <div className="w-[80px]">
+              <Image src="/flag-usa.svg" alt="" width={200} height={100} className="w-20 h-auto" />
+            </div>
+            <p className="px-4 font-bold text-2xl">2</p>
+          </div>
+          <div className="bg-int-primary text-white flex items-center">
+            <div className="w-[90px] flex justify-center bg-black">
+              <Image src="/flag-int.svg" alt="" width={200} height={100} className="w-20 h-auto" />
+            </div>
+            <p className="px-4 font-bold text-black text-2xl">0</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
