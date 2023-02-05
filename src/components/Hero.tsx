@@ -76,7 +76,7 @@ export default function Hero() {
           </Dialog.Panel>
         </Dialog>
         <div className="grow">
-          <div className="max-w-2xl py-32 pt-48 lg:pt-56 pb-10 ">
+          <div className="max-w-2xl pt-20 md:py-32 lg:pt-56 pb-40 ">
             <div className="text-left">
               <h1 className="text-4xl font-bold tracking-tight text-white text-6xl">The Kentucky Classic</h1>
               <p className="mt-6 text-lg leading-8 text-white">
