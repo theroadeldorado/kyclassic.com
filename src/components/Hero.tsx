@@ -82,8 +82,8 @@ export default function Hero() {
               <h1 className="text-4xl font-bold tracking-tight text-white text-6xl">The Kentucky Classic</h1>
               <p className="mt-6 text-lg leading-8 text-white">
                 The battle lines have been drawn in Kentucky this summer, as the 12-man Ryder Cup golf tournament returns with a vengeance. The Americans, reigning champions for the last two years,
-                will face off against a determined Internationals team. With tensions high and the pressure to win at an all-time high, this year's tournament is set to be an explosive showdown. The
-                Internationals, fueled by their burning desire for victory, are poised to end the Americans' reign and claim glory for themselves. Who will come out on top in this dramatic showdown of
+                will face off against a determined Internationals team. With tensions high and the pressure to win at an all-time high, this years tournament is set to be an explosive showdown. The
+                Internationals, fueled by their burning desire for victory, are poised to end the Americans reign and claim glory for themselves. Who will come out on top in this dramatic showdown of
                 skill and sportsmanship? The stage is set, the players are ready, and the tournament is about to begin.
               </p>
               <div className="mt-10 flex items-center justify-start gap-x-6">
