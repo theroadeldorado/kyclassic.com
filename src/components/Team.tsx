@@ -5,12 +5,10 @@ type Props = {
   people: PeopleT[];
   title?: string;
   intro?: string;
-  logo?: string;
-  logoMark?: string;
   team?: string;
 };
 
-export default function Team({ people, title, intro, logo, logoMark, team }: Props) {
+export default function Team({ people, title, intro, team }: Props) {
   // filter people by captain then by wins
   const sortedPeople = people.sort((a, b) => {
     if (a.captain && !b.captain) {
@@ -33,7 +31,7 @@ export default function Team({ people, title, intro, logo, logoMark, team }: Pro
       <div className="mx-auto max-w-7xl py-12 px-6 lg:px-8 lg:py-24">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
           <div className="space-y-5 sm:space-y-4 text-center lg:text-left">
-            <Image src={logo} className="mx-auto" alt="" width={400} height={300} />
+            <Image src={`flag-${team}.svg`} className="mx-auto" alt="" width={400} height={300} />
             <h2 className="text-3xl font-bold text-white tracking-tight sm:text-4xl">{title}</h2>
             <p className="text-xl font-light text-gray-100">{intro}</p>
           </div>
@@ -65,7 +63,7 @@ export default function Team({ people, title, intro, logo, logoMark, team }: Pro
                       </p>
                     </div>
                     <div className="absolute inset-0 opacity-20 translate-x-1/3">
-                      <Image src={logoMark} alt="" width={600} height={600} />
+                      <Image src={`flag-${team}-logo.svg`} alt="" width={600} height={600} />
                     </div>
                   </div>
                 </li>

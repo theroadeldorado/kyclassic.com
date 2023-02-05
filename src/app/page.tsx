@@ -102,16 +102,12 @@ export default function Home() {
       <div id="teams">
         <Team
           team="usa"
-          logo="/flag-usa.svg"
-          logoMark="/flag-usa-logo.svg"
           people={americans}
           title="The Americans"
           intro="The American golf team represents the United States. The team is proud to represent their country and strives to compete at the highest level in the tournament."
         />
         <Team
           team="int"
-          logo="/flag-int.svg"
-          logoMark="/flag-int-logo.svg"
           people={internationals}
           title="The Internationals"
           intro="The International team, despite its name, is comprised solely of golfers from the United States. The team's name serves as a nod to the international nature of the sport and the inclusive spirit of the players."
