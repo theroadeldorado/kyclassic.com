@@ -10,7 +10,6 @@ const navigation = [
   { name: 'Teams', href: '#teams' },
   { name: 'Match', href: '#match' },
   { name: 'Rules', href: '#rules' },
-  { name: 'Past Results', href: '#results' },
 ];
 
 export default function Hero() {
