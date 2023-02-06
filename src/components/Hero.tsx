@@ -8,7 +8,7 @@ import Logo from './Logo';
 
 const navigation = [
   { name: 'Teams', href: '#teams' },
-  { name: 'Match', href: '#match' },
+  { name: 'Courses', href: '#courses' },
   { name: 'Rules', href: '#rules' },
 ];
 

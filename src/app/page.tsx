@@ -112,32 +112,34 @@ export default function Home() {
           title="The Internationals"
           intro="The International team, despite its name, is comprised solely of golfers from the United States. The team's name serves as a nod to the international nature of the sport and the inclusive spirit of the players."
         />
-        <Course
-          image="/eagles-ridge.jpg"
-          position="left"
-          title="Eagle Ridge"
-          intro="Eagle Ridge golf course in Kentucky is a notoriously difficult golf course, renowned for its demanding holes that test even the most skilled golfers. Featuring a rugged terrain, narrow fairways lined with dense rough, and challenging greens, Eagle Ridge demands precision, accuracy, and a mastery of shot-making to score well."
-          par="71"
-          yards="6177"
-          slope="124"
-          rating="68.5"
-        />
-        <Course
-          image="/yatesville.jpg"
-          position="right"
-          title="Hidden Cove"
-          intro="Hidden Cove golf course in Yatesville, Kentucky is a serene golf course set among rolling hills and lush greenery. It offers a challenging layout with well-bunkered greens and a variety of hole designs that will test golfers of all skill levels."
-          par="72"
-          yards="6469"
-          slope="129"
-          rating="70.5"
-        />
+        <div id="courses">
+          <Course
+            image="/eagles-ridge.jpg"
+            position="left"
+            title="Eagle Ridge"
+            intro="Eagle Ridge golf course in Kentucky is a notoriously difficult golf course, renowned for its demanding holes that test even the most skilled golfers. Featuring a rugged terrain, narrow fairways lined with dense rough, and challenging greens, Eagle Ridge demands precision, accuracy, and a mastery of shot-making to score well."
+            par="71"
+            yards="6177"
+            slope="124"
+            rating="68.5"
+          />
+          <Course
+            image="/yatesville.jpg"
+            position="right"
+            title="Hidden Cove"
+            intro="Hidden Cove golf course in Yatesville, Kentucky is a serene golf course set among rolling hills and lush greenery. It offers a challenging layout with well-bunkered greens and a variety of hole designs that will test golfers of all skill levels."
+            par="72"
+            yards="6469"
+            slope="129"
+            rating="70.5"
+          />
+        </div>
         <Rules />
 
-        <div className="bg-black py-12">
-          <div className="w-36 h-auto mx-auto">
+        <div className="py-12 bg-black">
+          <div className="h-auto mx-auto w-36">
             <Image src="/gold.png" alt="" width={200} height={200} className="w-[150px] h-auto" />
-            <p className="text-white text-center text-sm mt-2"> 2021 - {new Date().getFullYear()}</p>
+            <p className="mt-2 text-sm text-center text-white"> 2021 - {new Date().getFullYear()}</p>
           </div>
         </div>
       </div>
