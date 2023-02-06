@@ -15,7 +15,7 @@ const internationals = [
   },
   {
     name: 'Nick Young',
-    points: 3.75,
+    points: 4.25,
     captain: false,
     image: '/people/nick.jpg',
     memberSince: 2021,
@@ -35,10 +35,10 @@ const internationals = [
     memberSince: 2022,
   },
   {
-    name: 'Dave TN',
+    name: 'Dave Schaff',
     points: 0,
     captain: false,
-    image: '/people/bryan.jpg',
+    image: '/people/daves.jpg',
     memberSince: 2022,
   },
   {
@@ -53,7 +53,7 @@ const internationals = [
 const americans = [
   {
     name: 'Matt Young',
-    points: 7,
+    points: 6.5,
     captain: true,
     image: '/people/matt.jpg',
     memberSince: 2021,
@@ -67,14 +67,14 @@ const americans = [
   },
   {
     name: 'Tim Bates',
-    points: 2.5,
+    points: 3.5,
     captain: false,
     image: '/people/tim.jpg',
     memberSince: 2021,
   },
   {
     name: 'Garrett Ormsb',
-    points: 4.5,
+    points: 5,
     captain: false,
     image: '/people/garrett.jpg',
     memberSince: 2021,
