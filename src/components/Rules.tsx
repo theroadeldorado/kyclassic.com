@@ -37,7 +37,7 @@ const faqs = [
 
 export default function Example() {
   return (
-    <div className="bg-gray-200" id="rules">
+    <div className="bg-gray-100" id="rules">
       <div className="px-6 py-24 mx-auto max-w-7xl sm:py-32 lg:py-40 lg:px-8">
         <div className="max-w-4xl mx-auto divide-y divide-gray-900/10">
           <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">The Rules</h2>
