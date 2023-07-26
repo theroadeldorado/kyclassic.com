@@ -109,7 +109,7 @@ export default function Hero() {
             <div className="w-[90px] flex justify-center bg-black">
               <Image src="/flag-int.svg" alt="" width={200} height={100} className="w-20 h-auto" />
             </div>
-            <p className="px-4 text-2xl font-bold text-black">0</p>
+            <p className="px-4 text-2xl font-bold text-black">1</p>
           </div>
         </div>
       </div>
